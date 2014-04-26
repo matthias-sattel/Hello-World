@@ -5,3 +5,10 @@
 (deftest a-test
   (testing "Fixed."
     (is (= 1 1))))
+
+(deftest ring-handler
+  (testing 
+      (is (=
+           (handler {})
+           {:status 200, :headers {"Content-Type" "text/html"}, :body "<h1>Hello World!</h1>"})
+          )))
