@@ -16,5 +16,3 @@
   (fact (let [{:keys [status headers body error] :as resp} @(http/get "http://localhost:3000")]
           (str body)) => "<h1>Hello World!</h1>"
    ))
-
-(println jetty-test)
