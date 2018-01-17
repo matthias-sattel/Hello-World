@@ -3,12 +3,16 @@
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :dependencies [[org.clojure/clojure "1.5.1"]
-                 [midje "1.3.0"]
-                 [ring/ring-core "1.2.2"]
+  :dependencies [[org.clojure/clojure "1.9.0-alpha17"]
+                 [midje "1.9.2-alpha2"]
+                 [ring/ring-core "1.6.3"]
                  [ring/ring-jetty-adapter "1.2.2"]
-                 [http-kit "2.1.16"]
-                 [org.clojure/core.async "0.1.303.0-886421-alpha"]]
-  :dev-dependencies [lein-midje "1.0.10"]
-  :profiles {:dev {:dependencies [[midje "1.5.1"]]}}
+                 [http-kit "2.2.0"]
+                 [org.clojure/core.async  "0.3.443"]]
+  :dev-dependencies [lein-midje "3.2.1"]
+
+  :min-lein-version "2.7.1"
+
+  :jvm-opts ["-Xmx1g" "--add-modules" "java.xml.bind"]
+  
   :main hello-world.core)
